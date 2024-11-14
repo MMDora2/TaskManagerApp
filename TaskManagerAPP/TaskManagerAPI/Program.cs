@@ -28,8 +28,8 @@ namespace TaskManagerAPI
             using (var scope = app.Services.CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<TaskContext>();
-                dbContext.Database.Migrate(); // Ensures that the database is created
-                SeedData(dbContext); // Call the method to seed data
+                dbContext.Database.Migrate(); //database is created
+                SeedData(dbContext); 
             }
 
             // Configure the HTTP request pipeline.
